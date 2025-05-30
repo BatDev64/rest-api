@@ -1,0 +1,46 @@
+### Recuperar todas las peliculas
+GET http://localhost:1234/movies
+
+### Recuperar una pelicula por id
+# GET http://localhost:1234/movies/1
+
+GET  http://localhost:1234/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+
+### Recuperar peliculas por genero
+GET http://localhost:1234/movies/genre/action
+
+### Crear una pelicula
+POST http://localhost:1234/movies
+Content-Type : application/json
+
+{
+    "title": "Dragon Ball Z: Battle of Gods",
+    "year": 2013,
+    "director": "Masahiro Hosoda",
+    "duration": 85,
+    "poster": "https://m.media-amazon.com/images/I/81nQvQb6pGL._AC_SY679_.jpg",
+    "genre": [
+        "Animation",
+        "Action",
+        "Adventure"
+    ],
+    "rate": 7.2
+}
+
+
+### Intentar crear una pelicula sin el campo title
+POST http://localhost:1234/movies
+Content-Type : application/json
+
+{
+    "year": 2013,
+    "director": "Masahiro Hosoda",
+    "duration": 85,
+    "poster": "https://m.media-amazon.com/images/I/81nQvQb6pGL._AC_SY679_.jpg",
+    "genre": [
+        "Animation",
+        "Action",
+        "Adventure"
+    ],
+    "rate": 7.2
+}
