@@ -27,7 +27,7 @@ app.use(cors({
     return callback(new Error('CORS policy violation: Origin not allowed'))
   }
 }))
-pp.use(cors({
+app.use(cors({
   origin: (origin, callback) => {
     const ACCEPTED_ORIGINS = [
       'http://localhost:3000',
